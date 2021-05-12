@@ -22,7 +22,7 @@ class MyHomePage extends StatelessWidget {
           children: [
             HeaderWithSearchBox(),
             TitleWithMoreBtn(title: "Recomended",),
-            RecomendsPlants(),
+            RecommendsPlants(),
             TitleWithMoreBtn(title: "Featured Plants", ),
           ],
         ),
