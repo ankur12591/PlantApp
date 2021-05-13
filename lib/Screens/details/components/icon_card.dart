@@ -11,9 +11,10 @@ class IconsCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      //color: Colors.orange,
       margin: EdgeInsets.symmetric(vertical: MediaQuery.of(context).size.height * 0.02, ),
       padding: EdgeInsets.all(kDefaultPadding / 2),
-      height: 62,
+      height: 52,
       width: 62,
       decoration: BoxDecoration(
         color: kBackgroundColor,

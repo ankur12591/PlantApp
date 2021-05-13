@@ -16,23 +16,24 @@ class ImagesAndIcons extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Expanded(
-              flex: 2,
+              flex: 1,
               child: Container(
                 //color: Colors.orange,
-                padding: const EdgeInsets.symmetric(vertical: kDefaultPadding * 2.0, horizontal: kDefaultPadding ),
+                padding: const EdgeInsets.symmetric(vertical: kDefaultPadding * 3.0, horizontal: kDefaultPadding ),
                 child: Column(
                   //crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Container(
                       //color: Colors.green,
                       child: IconButton(
-                        padding: EdgeInsets.only(right: kDefaultPadding * 1.8),
+                        padding: EdgeInsets.only(right: kDefaultPadding * 1.1),
                         icon: SvgPicture.asset("assets/icons/back_arrow.svg"),
                         onPressed: () {
                           Navigator.pop(context);
                         },
                       ),
                     ),
+                    Spacer(),
                     IconsCard(icon: "assets/icons/sun.svg"),
                     IconsCard(icon: "assets/icons/icon_2.svg"),
                     IconsCard(icon: "assets/icons/icon_3.svg"),
@@ -42,7 +43,7 @@ class ImagesAndIcons extends StatelessWidget {
               ),
             ),
             Expanded(
-              flex: 4,
+              flex: 3,
               child: Container(
                 height: MediaQuery.of(context).size.height * 0.8,
                 decoration: BoxDecoration(
