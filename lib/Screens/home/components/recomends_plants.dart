@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:plant_app1/Screens/details/details_screen.dart';
 
 import '../../../constants.dart';
 
@@ -7,11 +8,21 @@ class RecommendsPlants extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
+      scrollDirection: Axis.horizontal,
       child: Row(
         children: [
           GestureDetector(
-            onTap: () {},
-            child: RecomendPlantCard(
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => DetailsScreen(title: "Samantha",
+                    country: "Russia",
+                    price: 440,),
+                ),
+              );
+            },
+            child: RecommendPlantCard(
               image: "assets/images/image_1.png",
               title: "Samantha",
               country: "Russia",
@@ -19,8 +30,17 @@ class RecommendsPlants extends StatelessWidget {
             ),
           ),
           GestureDetector(
-            onTap: () {},
-            child: RecomendPlantCard(
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => DetailsScreen(title: "Angelica",
+                    country: "Russia",
+                    price: 440,),
+                ),
+              );
+            },
+            child: RecommendPlantCard(
               image: "assets/images/image_2.png",
               title: "Angelica",
               country: "Russia",
@@ -28,8 +48,17 @@ class RecommendsPlants extends StatelessWidget {
             ),
           ),
           GestureDetector(
-            onTap: () {},
-            child: RecomendPlantCard(
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => DetailsScreen(title: "Samantha",
+                    country: "Russia",
+                    price: 440,),
+                ),
+              );
+            },
+            child: RecommendPlantCard(
               image: "assets/images/image_3.png",
               title: "Samantha",
               country: "Russia",
@@ -42,12 +71,12 @@ class RecommendsPlants extends StatelessWidget {
   }
 }
 
-class RecomendPlantCard extends StatelessWidget {
+class RecommendPlantCard extends StatelessWidget {
   final String image, title, country;
   final int price;
   final Function press;
 
-  const RecomendPlantCard({
+  const RecommendPlantCard({
     this.image,
     this.title,
     this.country,
@@ -58,6 +87,12 @@ class RecomendPlantCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      margin: EdgeInsets.only(
+        left: kDefaultPadding,
+        top: kDefaultPadding / 2,
+        bottom: kDefaultPadding * 2.5,
+      ),
+      width: MediaQuery.of(context).size.width * 0.4,
       child: Column(
         children: [
           Image.asset(image),
@@ -82,8 +117,8 @@ class RecomendPlantCard extends StatelessWidget {
                 RichText(
                   text: TextSpan(children: [
                     TextSpan(
-                      text: "$title\n".toUpperCase(),
-                    ),
+                        text: "$title\n".toUpperCase(),
+                        style: Theme.of(context).textTheme.button),
                     TextSpan(
                       text: "$country".toUpperCase(),
                       style: TextStyle(

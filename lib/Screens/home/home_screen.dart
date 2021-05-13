@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:plant_app1/Components/bottom_navigation_bar.dart';
+import 'package:plant_app1/Screens/home/components/featured_plants.dart';
 import 'package:plant_app1/Screens/home/components/header_with_searchbox.dart';
 import 'package:plant_app1/Screens/home/components/recomends_plants.dart';
 import 'package:plant_app1/Screens/home/components/title_with_more.dart';
@@ -21,9 +22,14 @@ class MyHomePage extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             HeaderWithSearchBox(),
-            TitleWithMoreBtn(title: "Recomended",),
+            TitleWithMoreBtn(
+              title: "Recommended",
+            ),
             RecommendsPlants(),
-            TitleWithMoreBtn(title: "Featured Plants", ),
+            TitleWithMoreBtn(
+              title: "Featured Plants",
+            ),
+            FeaturedPlants()
           ],
         ),
       ),
