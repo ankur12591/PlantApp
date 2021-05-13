@@ -32,7 +32,7 @@ class FeaturedPlantCard extends StatelessWidget {
       margin: EdgeInsets.only(
         left: kDefaultPadding,
         top: kDefaultPadding / 2,
-        bottom: kDefaultPadding / 2,
+        bottom: kDefaultPadding * 1.5,
       ),
       width: MediaQuery.of(context).size.width * 0.8,
       height: 185,
